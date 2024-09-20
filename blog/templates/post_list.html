@@ -1,0 +1,15 @@
+<html>
+    <head>
+        <title> Blog Posts </title>
+    </head>
+
+    <body>
+        <h1>Login successful! Welcome!</h1>
+        <h2> Blog Posts </h2>
+        <ul>
+            {% for post in posts%}
+                <li><a href = "{% url 'post_detail' post.id %}">{{ post.title }}</a></li>
+            {% endfor %}
+        </ul>
+    </body>
+</html>
